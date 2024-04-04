@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<title> Sign-in </title>
+<body>
+    <div class="sign-in" style="text-align: center;">
+        <div class="Name"> <input id="nameInput" type="text" placeholder="Name"></input></div><br>
+        <div class="Username"> <input id="usernameInput" type="text" placeholder="Username"></input></div><br>
+        <div class="Password"> 
+        <input id="passwordInput" type="password" placeholder="Password"></input><br>
+        <input id="confirmPasswordInput" type="password" placeholder="Confirm Password"></input><br>
+        </div><br>
+        <div class="Email"> <input id="emailInput" type="email" placeholder="Email"></input></div><br>
+        <div class="Address"> <input id="addressInput" type="text" placeholder="Address"></input></div><br>
+        <div class="Interests"> <textarea id="interestsInput" placeholder="Interests"></textarea></div><br>
+        <button onclick="submitForm()">Submit</button>
+        <button onclick="resetForm()">Reset</button>
+    </div>
+
+    <script>
+        function submitForm() {
+            var name = document.getElementById("nameInput").value;
+            var username = document.getElementById("usernameInput").value;
+            var email = document.getElementById("emailInput").value;
+            var address = document.getElementById("addressInput").value;
+            var hobbies = document.getElementById("hobbiesInput").value;
+        }
+        function resetForm() {
+            if (confirm("Are you sure you want to reset the form?")) {
+                document.getElementById("nameInput").value = "";
+                document.getElementById("usernameInput").value = "";
+                document.getElementById("emailInput").value = "";
+                document.getElementById("addressInput").value = "";
+                document.getElementById("hobbiesInput").value = "";
+            }
+        }
+    </script>
+</body>
+    <style>
+        body {
+            background-image: url("cs.jpg");
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .sign-in-container {
+            background-color:rgb(255, 255, 255);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 60px 60px 60px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            width: 90%; 
+            max-width: 600px;
+        }
+
+        .sign-in-header {
+            font-size: 27px;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .input-field {
+            margin-bottom: 20px;
+        }
+
+        input {
+            padding: 12px;
+            width: calc(200% - 0px); 
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        button {
+            padding: 12px 20px;
+            background-color: #0026fd;
+            color: white;
+            border: none;
+            border-radius: 80px; 
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #686868;
+            opacity: 0.7; 
+        }
+    </style>
+</html>
+    
